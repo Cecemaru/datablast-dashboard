@@ -18,7 +18,9 @@ onMounted(() => {
   <div>
     <h2>Freeform Alaninin Icerigi</h2>
 
-    <div v-if="store.isLoading">Loading</div>
+    <div v-if="store.isLoading" class="spinner-border text-info" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
 
     <button
       type="button"
