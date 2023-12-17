@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
 import { useStore } from '@/stores/credential'
+import FormModal from '@/components/FormModal.vue'
 
 const store = useStore()
 
@@ -23,11 +24,11 @@ onMounted(() => {
       type="button"
       class="btn btn-primary"
       data-bs-toggle="modal"
-      data-bs-target="#exampleModal"
+      data-bs-target="#formModal"
     >
       Launch demo modal
     </button>
 
-    <Modal></Modal>
+    <FormModal />
   </div>
 </template>

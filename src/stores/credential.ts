@@ -13,12 +13,17 @@ interface MyStoreState {
 
 export const useStore = defineStore('credential', {
   state: (): MyStoreState => {
+    const storedData = localStorage.getItem('allData')
+    const initialState = storedData
+      ? JSON.parse(storedData)
+      : {
+          'Content-Length': '',
+          'Content-Type': '',
+          freeform: ''
+        }
+
     return {
-      response: {
-        'Content-Length': '',
-        'Content-Type': '',
-        freeform: ''
-      },
+      response: initialState,
       isLoading: false
     }
   },
