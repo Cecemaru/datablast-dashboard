@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import VerticalNavbar from '@/components/layout/ui/VerticalNavbar.vue'
+import HeaderNavbar from './ui/HeaderNavbar.vue'
 </script>
 
 <template>
@@ -9,6 +10,7 @@ import VerticalNavbar from '@/components/layout/ui/VerticalNavbar.vue'
     </div>
 
     <div class="w-100 mx-3">
+      <HeaderNavbar />
       <router-view></router-view>
     </div>
   </div>
