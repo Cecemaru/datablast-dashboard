@@ -3,7 +3,7 @@ import Logo from '@/assets/datablast.png'
 </script>
 
 <template>
-  <div class="border vh-100 sticky-top bg-white">
+  <div class="bg-white">
     <div class="p-4 my-2">
       <router-link class="" to="/"><img v-bind:src="Logo" alt="Logo" /></router-link>
     </div>

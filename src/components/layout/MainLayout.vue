@@ -6,7 +6,9 @@ import HeaderNavbar from './ui/HeaderNavbar.vue'
 <template>
   <div class="d-flex bg-secondary-subtle">
     <div class="d-none d-lg-block w-25">
-      <VerticalNavbar />
+      <div class="border vh-100 sticky-top bg-white">
+        <VerticalNavbar />
+      </div>
     </div>
 
     <div class="w-100 mx-3">

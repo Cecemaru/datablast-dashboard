@@ -11,9 +11,23 @@ defineProps(['buttonData'])
       <p class="card-text" v-if="buttonData.headerName">
         {{ buttonData.headerValue }}
       </p>
-      <p v-if="!buttonData.headerName" class="card-text fs-4 fw-bold">
+      <p v-if="!buttonData.headerName" class="card-text fs-4 fw-bold header-text">
         Lütfen Header Detayları İçin Tablo Üzerinden Bir Yere Tıklayın
       </p>
     </div>
   </div>
 </template>
+
+<style>
+@media (max-width: 992px) {
+  .header-text {
+    font-size: 1.4rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-text {
+    font-size: 1rem !important;
+  }
+}
+</style>

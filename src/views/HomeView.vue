@@ -65,7 +65,7 @@ const fetchHeader = async () => {
           @click="openDetail(key, value, index)"
         >
           <td>{{ index + 1 }}</td>
-          <td>{{ value }}</td>
+          <td>{{ key }}</td>
           <td>{{ value }}</td>
         </tr>
       </tbody>

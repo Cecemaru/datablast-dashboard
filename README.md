@@ -1,3 +1,9 @@
+## [👉>Projenin Vercel Deploy Linki👈](https://datablast-dashboard.vercel.app/)
+
+# Genel Bakış
+
+![screenshot](https://github.com/Cecemaru/datablast-dashboard/blob/master/public/datablast-dashboard-ss.png)
+
 # Datablast Dashboard
 
 Bu proje, Vue.js kullanılarak geliştirilmiş bir frontend uygulamasını içermektedir. Vue Router ile sayfa yönlendirmeleri yapılmış, Pinia kullanılarak global bir state yönetimi sağlanmış ve Axios aracılığıyla API çağrıları gerçekleştirilmiştir. Ayrıca, Bootstrap kullanılarak UI tasarımı oluşturulmuştur.
@@ -30,12 +36,6 @@ Projenizi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyi
 
    ```bash
    npm install
-   ```
-
-   veya
-
-   ```bash
-   yarn
    ```
 
 ### Geliştirme Sunucusunu Başlatma
