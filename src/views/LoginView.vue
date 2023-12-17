@@ -3,6 +3,8 @@ import { onMounted } from 'vue'
 import { useStore } from '@/stores/credential'
 import FormModal from '@/components/FormModal.vue'
 
+declare var bootstrap: any
+
 const store = useStore()
 
 onMounted(() => {

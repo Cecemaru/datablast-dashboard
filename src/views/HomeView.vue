@@ -5,7 +5,7 @@ import axios from 'axios'
 
 const base = import.meta.env.VITE_BASE_URL
 
-const headers = ref(null)
+const headers = ref<Record<string, string> | null>({})
 
 const selectDetails = ref({
   headerName: null as string | null,
@@ -65,7 +65,7 @@ const fetchHeader = async () => {
           @click="openDetail(key, value, index)"
         >
           <td>{{ index + 1 }}</td>
-          <td>{{ key }}</td>
+          <td>{{ value }}</td>
           <td>{{ value }}</td>
         </tr>
       </tbody>
