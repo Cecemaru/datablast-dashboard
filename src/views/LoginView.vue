@@ -6,12 +6,13 @@ import FormModal from '@/components/FormModal.vue'
 const store = useStore()
 
 onMounted(() => {
-  // myModal.show()
+  if (store.response.freeform) {
+    return null
+  } else {
+    var myModal = new bootstrap.Modal(document.getElementById('formModal'), { keyboard: false })
+    myModal.show()
+  }
 })
-
-// onMounted(() => {
-//   store.freeFormChange(input.value);
-// });
 </script>
 
 <template>

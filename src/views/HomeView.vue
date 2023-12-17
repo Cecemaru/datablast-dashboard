@@ -5,15 +5,15 @@ import axios from 'axios'
 
 const base = import.meta.env.VITE_BASE_URL
 
-const headers = ref({})
+const headers = ref(null)
 
 const selectDetails = ref({
   headerName: null as string | null,
-  headerValue: null as string | null,
+  headerValue: null as number | null,
   headerId: null as number | null
 })
 
-const openDetail = (value: string, key: string, index: number) => {
+const openDetail = (key: string, value: number, index: number) => {
   selectDetails.value = {
     headerName: key,
     headerValue: value,
@@ -36,12 +36,18 @@ const fetchHeader = async () => {
 </script>
 
 <template>
-  <div>
+  <div class="container">
     <h2>Headers Uc Noktasindan Gelen Istek</h2>
 
     <DetailDisplay :buttonData="selectDetails" />
 
-    <table class="table table-hover table-striped">
+    <div v-show="!headers" class="row vh-100 justify-content-center">
+      <div class="spinner-border text-info mt-3" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
+    <table v-show="headers" class="table table-hover table-striped">
       <thead>
         <tr>
           <th class="col-1">#</th>
@@ -56,7 +62,7 @@ const fetchHeader = async () => {
           data-bs-toggle="collapse"
           :data-bs-target="'#collapseExample' + index"
           aria-expanded="false"
-          @click="openDetail(value, key, index)"
+          @click="openDetail(key, value, index)"
         >
           <td>{{ index + 1 }}</td>
           <td>{{ key }}</td>

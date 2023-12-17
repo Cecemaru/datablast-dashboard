@@ -49,7 +49,9 @@ const onSubmitForm = () => {
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary">Form Submit</button>
+            <button data-bs-dismiss="modal" type="submit" class="btn btn-primary">
+              Form Submit
+            </button>
           </div>
         </div>
       </div>
