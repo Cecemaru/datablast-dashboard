@@ -1,7 +1,33 @@
+<script setup lang="ts">
+import { onMounted } from 'vue'
+import { useStore } from '@/stores/credential'
+
+const store = useStore()
+
+onMounted(() => {
+  // myModal.show()
+})
+
+// onMounted(() => {
+//   store.freeFormChange(input.value);
+// });
+</script>
+
 <template>
   <div>
-    <h1>This is an Login page</h1>
+    <h2>Freeform Alaninin Icerigi</h2>
+
+    <div v-if="store.isLoading">Loading</div>
+
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    >
+      Launch demo modal
+    </button>
+
+    <Modal></Modal>
   </div>
 </template>
-
-<style></style>
