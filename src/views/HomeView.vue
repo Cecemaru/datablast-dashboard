@@ -9,11 +9,11 @@ const headers = ref(null)
 
 const selectDetails = ref({
   headerName: null as string | null,
-  headerValue: null as number | null,
+  headerValue: null as string | null,
   headerId: null as number | null
 })
 
-const openDetail = (key: string, value: number, index: number) => {
+const openDetail = (key: string, value: string, index: number) => {
   selectDetails.value = {
     headerName: key,
     headerValue: value,

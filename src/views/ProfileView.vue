@@ -14,9 +14,22 @@ const store = useStore()
       </div>
 
       <div v-show="store.response" class="card-body">
-        <h5 class="card-title">{{ store.response.freeform }}</h5>
-        <p class="card-text">{{ store.response['Content-Length'] }}</p>
-        <p class="card-text">{{ store.response['Content-Type'] }}</p>
+        <table v-show="store.response.freeform" class="table table-hover table-striped">
+          <thead>
+            <tr>
+              <th class="col-1">#</th>
+              <th class="col-4">Header Adı</th>
+              <th class="col-7">Header Değeri</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(value, key, index) in store.response" :key="index">
+              <td>{{ index + 1 }}</td>
+              <td>{{ key }}</td>
+              <td>{{ value }}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>

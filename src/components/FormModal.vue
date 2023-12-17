@@ -12,10 +12,6 @@ const onSubmitForm = () => {
 </script>
 
 <template>
-  <div>hmodal</div>
-
-  <div v-if="!store.isLoading">{{ store.response.freeform }}</div>
-
   <div
     class="modal fade"
     id="formModal"
@@ -27,7 +23,7 @@ const onSubmitForm = () => {
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="formModalLabel">First and Last Name</h1>
+            <h1 class="modal-title fs-5" id="formModalLabel">Profil FreeForm</h1>
             <button
               type="button"
               class="btn-close"
@@ -44,13 +40,18 @@ const onSubmitForm = () => {
                 id="fullName"
                 placeholder="name@form.com"
               />
-              <label for="fullName">Full Name</label>
+              <label for="fullName">Ad Soyad</label>
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button data-bs-dismiss="modal" type="submit" class="btn btn-primary">
-              Form Submit
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+            <button
+              :disabled="!input"
+              data-bs-dismiss="modal"
+              type="submit"
+              class="btn btn-primary"
+            >
+              Gönder
             </button>
           </div>
         </div>
