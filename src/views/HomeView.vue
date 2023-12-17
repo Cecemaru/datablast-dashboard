@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import DetailDisplay from '@/components/DetailDisplay.vue'
 import { ref, onMounted } from 'vue'
 import axios from 'axios'
 
@@ -37,6 +38,8 @@ const fetchHeader = async () => {
 <template>
   <div>
     <h2>Headers Uc Noktasindan Gelen Istek</h2>
+
+    <DetailDisplay :buttonData="selectDetails" />
 
     <table class="table table-hover table-striped">
       <thead>
