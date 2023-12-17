@@ -23,7 +23,7 @@ Projenizi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyi
 1. Proje dizinine gidin:
 
    ```bash
-   cd proje-dizini
+   cd datablast-dashboard
    ```
 
 2. Bağımlılıkları yükleyin:
